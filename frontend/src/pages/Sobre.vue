@@ -40,9 +40,70 @@
 </template>
 
 <script setup lang="ts">
-// Component logic here
+import { onMounted } from "vue";
+
+onMounted(() => {
+  const cards = document.querySelectorAll(".values-grid article");
+
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add("show");
+    }, index * 200);
+  });
+});
 </script>
 
 <style scoped>
-/* Estilos herdados da folha de estilos global */
+.about-copy p {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--text-color, #555);
+}
+
+.values-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.values-grid article {
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.values-grid article:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.values-grid span {
+  display: inline-block;
+
+  margin-bottom: 0.75rem;
+
+  font-weight: 700;
+
+  color: #8b5e3c;
+}
+
+.values-grid h3 {
+  margin-bottom: 0.75rem;
+}
+
+.values-grid p {
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
