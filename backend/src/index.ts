@@ -9,12 +9,12 @@ import orderRoutes from './routes/order'
 dotenv.config()
 
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 5000
 
 // Middlewares
 app.use(cors({
   origin: (origin, callback) => {
-    const allowedOrigins = ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000']
+    const allowedOrigins = ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5000']
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true)
     } else {
