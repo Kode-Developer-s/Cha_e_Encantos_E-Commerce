@@ -16,6 +16,7 @@
         <p>
           A curadoria combina tradição, experimentação e cuidado: flores para suavidade,
           raízes para profundidade, especiarias para intensidade e folhas selecionados para frescor e equilíbrio.
+        </p>      
       </div>
 
       <div class="values-grid" aria-label="Valores da marca">
