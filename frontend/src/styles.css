@@ -1081,3 +1081,51 @@ h3 {
     max-width: 100%;
   }
 }
+@media (max-width: 480px) {
+  h1 {
+    font-size: clamp(2.4rem, 10vw, 3.5rem);
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-actions .button {
+    min-width: 0;
+    width: 100%;
+    font-size: 1.1rem;
+    min-height: 56px;
+  }
+
+  .site-header {
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    padding: 10px 16px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .home-hero {
+    padding: 32px 16px;
+    gap: 32px;
+  }
+
+  .product-grid,
+  .favorite-grid {
+    grid-template-columns: 1fr;
+    padding: 0 16px 48px;
+  }
+
+  .filters {
+    padding: 0 16px 24px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+  }
+}
