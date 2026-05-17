@@ -57,7 +57,7 @@ onMounted(() => {
 .about-copy p {
   line-height: 1.8;
   margin-bottom: 1.5rem;
-  color: var(--text-color, #555);
+  color: var(--text-color, #555555);
 }
 
 .values-grid {
